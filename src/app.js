@@ -61,7 +61,7 @@ const PLAYERS = [
     return player;
   };
   
-  const createPlayers = (players, type) => {
+  const buildPlayers = (players, type) => {
     let fragment = document.createElement('div');
     players
       .filter((player) => player.type == type)
@@ -74,8 +74,8 @@ const PLAYERS = [
   };
   // Display players in HTML
   const viewPlayers = (players) => {
-    document.getElementById('heroes').innerHTML = createPlayers(players, 'hero');
-    document.getElementById('villains').innerHTML = createPlayers(
+    document.getElementById('heroes').innerHTML = buildPlayers(players, 'hero');
+    document.getElementById('villains').innerHTML = buildPlayers(
       players,
       'villain'
     );
